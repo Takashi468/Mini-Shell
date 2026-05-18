@@ -82,6 +82,9 @@ pub fn commands_base(input: &str) -> std::io::Result<()> {
                     }
                     Ok(())
                 }
+                "exit" => {
+                    std::process::exit(0);
+                }
                 _ => {
                     println!("Unknown command: {}", command);
                     Ok(())
