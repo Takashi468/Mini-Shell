@@ -74,6 +74,14 @@ pub fn commands_base(input: &str) -> std::io::Result<()> {
                     // };
                     Ok(())
                 }
+                "echo" => {
+                    if let Some(first_arg) = args.get(0) {
+                        println!("{}", first_arg);
+                    } else {
+                        println!("Error: No arguments provided to echo!");
+                    }
+                    Ok(())
+                }
                 _ => {
                     println!("Unknown command: {}", command);
                     Ok(())
